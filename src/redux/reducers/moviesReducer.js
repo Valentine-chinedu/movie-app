@@ -1,6 +1,6 @@
 import { FETCH_MOVIES } from "../actions/types";
 
-export default (state = [], action) => {
+const movies = (state = [], action) => {
 	if (action.type === FETCH_MOVIES) {
 		if (action.payload.page === 1) {
 			return action.payload;
@@ -14,3 +14,5 @@ export default (state = [], action) => {
 
 	return state;
 };
+
+export default movies;
