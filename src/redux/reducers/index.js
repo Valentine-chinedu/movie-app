@@ -1,6 +1,6 @@
 import { combineReducers } from "redux";
-import actorsReducer from "./actorsReducer";
-import movieDetailsReducer from "./movieDetailsReducer";
+import actorsReducer from "./castReducers";
+import movieDetailsReducer from "./genreListReducers";
 import moviesReducer from "./moviesReducer";
 import searchReducer from "./searchReducer";
 
