@@ -1,0 +1,25 @@
+@import "./mixins";
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+	font-family: "Lato", sans-serif;
+
+	@include respond(tab-land) {
+		font-size: 56.25%;
+	}
+	@include respond(tab-port) {
+		font-size: 50%; //8px = 1rem : 8/16 = 50%
+	}
+
+	@media screen and (min-width: 1800px) {
+		font-size: 75%;
+	}
+}
