@@ -1,19 +1,24 @@
-import { createStore, applyMiddleware } from "redux";
-import { composeWithDevTools } from "redux-devtools-extension";
+import { combineReducers, createStore, applyMiddleware } from "redux";
 import thunk from "redux-thunk";
+import { composeWithDevTools } from "redux-devtools-extension";
+import {
+	movieDetailsReducer,
+	movieListReducer,
+	movieVideoReducer,
+} from "./reducers/moviesReducer";
+import { genreListReducer } from "./reducers/genreListReducers";
+import { castDetailsReduce, castListReducer } from "./reducers/castReducers";
 
-import logger from "./middleware/logger";
-import reducers from "./reducers";
-import monitorReducerEnhancer from "./enhancer/monitorReducer";
+const reducer = combineReducers({
+	movieList: movieListReducer,
+	movieDetails: movieDetailsReducer,
+	movieVideo: movieVideoReducer,
+	genreList: genreListReducer,
+	castList: castListReducer,
+	castDetails: castDetailsReduce,
+});
 
-export default function configureStore(preloadedState) {
-	const middlewares = [logger, thunk];
-	const middlewareEnhancer = applyMiddleware(...middlewares);
-
-	const enhancer = [middlewareEnhancer, monitorReducerEnhancer];
-	const composedEnhancers = composeWithDevTools(...enhancer);
-
-	const store = createStore(reducers, preloadedState, composedEnhancers);
-
-	return store;
-}
+export const store = createStore(
+	reducer,
+	composeWithDevTools(applyMiddleware(thunk))
+);
