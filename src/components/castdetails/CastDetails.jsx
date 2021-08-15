@@ -1,9 +1,10 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getCastDetails } from "../../actions/castAction";
+
 import Loader from "../Loader/Loader";
 import { FaImdb } from "react-icons/fa";
 import "./castDetails.scss";
+import { getCastDetails } from "../../redux/actions/castAction";
 
 const CastDetails = ({ id }) => {
 	const dispatch = useDispatch();
