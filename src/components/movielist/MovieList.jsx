@@ -3,10 +3,9 @@ import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import "./movieList.scss";
 
-import { getMoviesList } from "../../actions/moviesActions";
-
-import Loader from "../Loader/Loader";
-import { genres } from "../../components/Sidebar/genres";
+import { getMoviesList } from "../../redux/actions/moviesActions";
+import Loader from "react-spinners/BarLoader";
+import { genres } from "../../helpers/genres";
 
 const MovieList = ({ genre, movieId, page, filteredKeyword }) => {
 	const dispatch = useDispatch();
@@ -38,6 +37,7 @@ const MovieList = ({ genre, movieId, page, filteredKeyword }) => {
 				<Link to={`/movie/${movie.id}`} key={movie.id} className='container'>
 					<div className='image'>
 						<img
+							loading='lazy'
 							src={`${process.env.REACT_APP_IMAGE_URI}${movie.poster_path}`}
 							alt={movie.title}
 						/>

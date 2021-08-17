@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { getMoviesList } from "../../actions/moviesActions";
 import { BsFillCollectionPlayFill, BsCalendar } from "react-icons/bs";
 import { FaHome, FaSearch } from "react-icons/fa";
 import { GiRank3 } from "react-icons/gi";
 
 import "./header.scss";
 import { Link } from "react-router-dom";
+import { getMoviesList } from "../../redux/actions/moviesActions";
 
 const Header = () => {
 	const [inputValue, setInputValue] = useState("");

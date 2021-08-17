@@ -1,10 +1,12 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import "./castList.scss";
-import { getCastList } from "../../actions/castAction";
+
 import Slider from "react-slick";
-import Loader from "../Loader/Loader";
+
 import { Link } from "react-router-dom";
+import { getCastList } from "../../redux/actions/castAction";
+import Loader from "react-spinners/BarLoader";
 
 const CastList = ({ id }) => {
 	const dispatch = useDispatch();

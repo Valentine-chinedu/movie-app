@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
-import Loader from "../Loader/Loader";
 import { FaImdb } from "react-icons/fa";
 import "./castDetails.scss";
 import { getCastDetails } from "../../redux/actions/castAction";
+import Loader from "react-spinners/BarLoader";
 
 const CastDetails = ({ id }) => {
 	const dispatch = useDispatch();

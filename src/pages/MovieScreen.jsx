@@ -1,9 +1,8 @@
-import React from "react";
-import Footer from "../components/Footer/Footer";
-import Header from "../components/Header/Header";
-import MovieDetails from "../components/MovieDetails/MovieDetails";
-import MovieList from "../components/MovieList/MovieList";
-import Sidebar from "../components/Sidebar/Sidebar";
+import Footer from "../components/footer/Footer";
+import Header from "../components/header/Header";
+import MovieDetails from "../components/moviedetails/MovieDetails";
+import MovieList from "../components/movielist/MovieList";
+import Sidebar from "../components/sidebar/Sidebar";
 
 const MovieScreen = ({ match }) => {
 	return (

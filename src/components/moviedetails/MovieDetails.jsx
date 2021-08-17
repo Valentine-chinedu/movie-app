@@ -1,19 +1,26 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import Loader from "../Loader/Loader";
+
 import "./movieDetails.scss";
-import { getMovieDetails, getMovieVideo } from "../../actions/moviesActions";
+
 import ReactStars from "react-rating-stars-component";
 import { Link } from "react-router-dom";
 import { FaImdb, FaLink } from "react-icons/fa";
 import { FcLike } from "react-icons/fc";
-import CastList from "../CastList/CastList";
+
+import {
+	getMovieDetails,
+	getMovieVideo,
+} from "../../redux/actions/moviesActions";
+import Loader from "react-spinners/BarLoader";
+import CastList from "../castlist/CastList";
 
 const MovieDetails = ({ id }) => {
 	const dispatch = useDispatch();
 
 	const movieDetails = useSelector((state) => state.movieDetails);
 	const { loading, movie } = movieDetails;
+	console.log(movieDetails);
 
 	const movieVideo = useSelector((state) => state.movieVideo);
 	const { videos } = movieVideo;
