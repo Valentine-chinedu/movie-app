@@ -11,6 +11,6 @@ View your favourite movies, reviews and ratings.
 - Sass 
 - TMDb-Api
 
-## Link
+## Live Applicaion
 
 [Live website](https://movie-app-c3582.web.app/)
