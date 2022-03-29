@@ -1,6 +1,6 @@
 ![upworkM2](https://user-images.githubusercontent.com/65251662/160618009-7bcd8cef-7ff8-4f7b-a53d-e9e57fcc2ab8.png)
 
-## Description
+## About
 
 View your favourite movies, reviews and ratings.
 
